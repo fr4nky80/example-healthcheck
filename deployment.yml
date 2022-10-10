@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: examplehc
+  name: examplehc
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: examplehc
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: examplehc
+    spec:
+      containers:
+      - image: faroca/examplehealthcheck
+        name: examplehc
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 5400 
+status: {}
