@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: examplehc
+spec:
+  containers:
+    - image: faroca/examplehealthcheck
+      name: examplehc
+      imagePullPolicy: Always
+      resources: {}
+      ports:
+        - containerPort: 8080
